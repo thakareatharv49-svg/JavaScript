@@ -1,0 +1,65 @@
+# Day 1 - JavaScript Basics
+
+## Topics Learned
+
+* What is JavaScript?
+* console.log()
+* Variables
+* Data Types
+
+## What is JavaScript?
+
+JavaScript is a programming language used to make websites interactive and dynamic.
+
+## console.log()
+
+Used to print output to the console.
+
+```javascript
+console.log("Hello World");
+```
+
+## Variables
+
+Variables are used to store data.
+
+```javascript
+let name = "Atharv";
+const country = "India";
+```
+
+### let
+
+* Can be changed later.
+
+### const
+
+* Cannot be reassigned.
+
+## Data Types
+
+### String
+
+```javascript
+let name = "Atharv";
+```
+
+### Number
+
+```javascript
+let age = 19;
+```
+
+### Boolean
+
+```javascript
+let isStudent = true;
+```
+
+## Key Takeaways
+
+* JavaScript makes websites interactive.
+* console.log() displays output.
+* let stores changeable values.
+* const stores fixed values.
+* Common data types are String, Number, and Boolean.
