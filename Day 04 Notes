@@ -1,0 +1,171 @@
+# Day 4 - Loops
+
+## Topics Learned
+
+* What are loops?
+* for loop
+* Loop components
+* Increment operator (i++)
+* Repeating code efficiently
+
+## What is a Loop?
+
+A loop is used to repeat a block of code multiple times without writing the same code again and again.
+
+Example without a loop:
+
+```javascript
+console.log("Atharv");
+console.log("Atharv");
+console.log("Atharv");
+```
+
+Example with a loop:
+
+```javascript
+for (let i = 1; i <= 3; i++) {
+    console.log("Atharv");
+}
+```
+
+## for Loop Syntax
+
+```javascript
+for (initialization; condition; update) {
+    // code to execute
+}
+```
+
+Example:
+
+```javascript
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+```
+
+Output:
+
+```text
+1
+2
+3
+4
+5
+```
+
+## Understanding the for Loop
+
+```javascript
+for (let i = 1; i <= 5; i++)
+```
+
+### Initialization
+
+```javascript
+let i = 1;
+```
+
+The loop starts with the value 1.
+
+### Condition
+
+```javascript
+i <= 5
+```
+
+The loop runs while this condition is true.
+
+### Update
+
+```javascript
+i++
+```
+
+After every iteration, the value of i increases by 1.
+
+## Increment Operator
+
+```javascript
+i++
+```
+
+is the same as:
+
+```javascript
+i = i + 1;
+```
+
+Example:
+
+```javascript
+let i = 1;
+
+i++; // 2
+i++; // 3
+i++; // 4
+```
+
+## console.log(i) vs console.log("i")
+
+### Value of Variable
+
+```javascript
+console.log(i);
+```
+
+Output:
+
+```text
+1
+2
+3
+```
+
+### String
+
+```javascript
+console.log("i");
+```
+
+Output:
+
+```text
+i
+i
+i
+```
+
+## Practice Program
+
+Print numbers from 1 to 10:
+
+```javascript
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+```
+
+Output:
+
+```text
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+## Key Takeaways
+
+* Loops are used to repeat code.
+* A for loop contains initialization, condition, and update.
+* i++ increases a variable by 1.
+* console.log(i) prints the value of the variable.
+* console.log("i") prints the text "i".
+* Loops reduce repetitive code and improve efficiency.
