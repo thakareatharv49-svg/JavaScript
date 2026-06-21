@@ -1,0 +1,113 @@
+# Day 6 - Arrays
+
+## Topics Learned
+
+* What are Arrays?
+* Creating Arrays
+* Accessing Elements
+* Updating Elements
+* Array Length
+
+## What is an Array?
+
+An array is used to store multiple values in a single variable.
+
+Without an array:
+
+```javascript
+let subject1 = "Math";
+let subject2 = "Physics";
+let subject3 = "Chemistry";
+```
+
+With an array:
+
+```javascript
+let subjects = ["Math", "Physics", "Chemistry"];
+```
+
+## Creating an Array
+
+```javascript
+let fruits = ["Apple", "Banana", "Mango"];
+```
+
+## Accessing Elements
+
+Array indexing starts from 0.
+
+```javascript
+let fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+```
+
+Output:
+
+```text
+Apple
+Banana
+Mango
+```
+
+## Index Positions
+
+```text
+["Apple", "Banana", "Mango"]
+    0         1         2
+```
+
+## Updating an Element
+
+```javascript
+let fruits = ["Apple", "Banana", "Mango"];
+
+fruits[1] = "Orange";
+
+console.log(fruits);
+```
+
+Output:
+
+```text
+["Apple", "Orange", "Mango"]
+```
+
+## Array Length
+
+```javascript
+let fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits.length);
+```
+
+Output:
+
+```text
+3
+```
+
+## Mini Task
+
+```javascript
+let skills = ["JavaScript", "HTML", "CSS"];
+
+console.log(skills[0]);
+```
+
+Output:
+
+```text
+JavaScript
+```
+
+## Key Takeaways
+
+* Arrays store multiple values in one variable.
+* Array indexing starts from 0.
+* Elements are accessed using square brackets [].
+* Array values can be updated.
+* `.length` returns the number of elements in an array.
+* Arrays are widely used in JavaScript, React, and Node.js.
