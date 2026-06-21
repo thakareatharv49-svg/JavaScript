@@ -1,0 +1,100 @@
+# Day 5 - Functions
+
+## Topics Learned
+
+* What are Functions?
+* Function Declaration
+* Function Calls
+* Parameters and Arguments
+* Code Reusability
+
+## What is a Function?
+
+A function is a reusable block of code that performs a specific task.
+
+## Function Syntax
+
+```javascript
+function functionName() {
+    // code
+}
+```
+
+## Example
+
+```javascript
+function greet() {
+    console.log("Hello");
+}
+
+greet();
+```
+
+Output:
+
+```text
+Hello
+```
+
+## Function with Parameters
+
+```javascript
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+greet("Atharv");
+```
+
+Output:
+
+```text
+Hello Atharv
+```
+
+## Parameters vs Arguments
+
+```javascript
+function greet(name) {
+    console.log(name);
+}
+
+greet("Atharv");
+```
+
+* `name` → Parameter
+* `"Atharv"` → Argument
+
+## Function with Multiple Parameters
+
+```javascript
+function add(a, b) {
+    console.log(a + b);
+}
+
+add(5, 3);
+```
+
+Output:
+
+```text
+8
+```
+
+## Mini Task
+
+```javascript
+function intro() {
+    console.log("My name is Atharv");
+}
+
+intro();
+```
+
+## Key Takeaways
+
+* Functions help reuse code.
+* Functions make programs organized.
+* Parameters receive values.
+* Arguments are values passed to functions.
+* Functions are heavily used in JavaScript, React, and Node.js.
