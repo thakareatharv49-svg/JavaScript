@@ -1,0 +1,92 @@
+# Day 2 - Operators
+
+## Topics Learned
+
+* Arithmetic Operators
+* Increment Operator
+* Comparison Operators
+
+## Arithmetic Operators
+
+```javascript
+let a = 10;
+let b = 5;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);
+```
+
+### Operators
+
+| Operator | Meaning        |
+| -------- | -------------- |
+| +        | Addition       |
+| -        | Subtraction    |
+| *        | Multiplication |
+| /        | Division       |
+| %        | Remainder      |
+
+## Increment Operator
+
+```javascript
+let x = 5;
+x++;
+
+console.log(x);
+```
+
+Output:
+
+```text
+6
+```
+
+## Comparison Operators
+
+### Equal To (==)
+
+```javascript
+console.log(10 == "10");
+```
+
+Output:
+
+```text
+true
+```
+
+### Strict Equal To (===)
+
+```javascript
+console.log(10 === "10");
+```
+
+Output:
+
+```text
+false
+```
+
+## Comparison Symbols
+
+| Operator | Meaning                  |
+| -------- | ------------------------ |
+| >        | Greater Than             |
+| <        | Less Than                |
+| >=       | Greater Than or Equal To |
+| <=       | Less Than or Equal To    |
+| ==       | Equal To                 |
+| ===      | Strict Equal To          |
+| !=       | Not Equal To             |
+| !==      | Strict Not Equal To      |
+
+## Key Takeaways
+
+* Arithmetic operators perform calculations.
+* ++ increases a value by 1.
+* == compares values.
+* === compares both value and data type.
+* Prefer === in real-world applications.
