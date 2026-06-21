@@ -1,0 +1,75 @@
+# Day 3 - If-Else Statements
+
+## Topics Learned
+
+* Decision Making
+* if-else Statements
+* Conditional Logic
+
+## What is if-else?
+
+if-else is used to make decisions in a program.
+
+## Syntax
+
+```javascript
+if (condition) {
+    // code executes if condition is true
+} else {
+    // code executes if condition is false
+}
+```
+
+## Example 1
+
+```javascript
+let age = 19;
+
+if (age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+```
+
+Output:
+
+```text
+Adult
+```
+
+## Example 2
+
+```javascript
+let marks = 40;
+
+if (marks >= 35) {
+    console.log("Pass");
+} else {
+    console.log("Fail");
+}
+```
+
+Output:
+
+```text
+Pass
+```
+
+## Common Comparison Operators
+
+| Operator | Meaning                  |
+| -------- | ------------------------ |
+| >        | Greater Than             |
+| <        | Less Than                |
+| >=       | Greater Than or Equal To |
+| <=       | Less Than or Equal To    |
+| ===      | Strict Equal To          |
+| !==      | Not Equal To             |
+
+## Key Takeaways
+
+* if executes when the condition is true.
+* else executes when the condition is false.
+* Conditions return either true or false.
+* if-else helps programs make decisions.
