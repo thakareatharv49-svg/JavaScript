@@ -1,0 +1,30 @@
+📁 ES6 Day 7 – Default Parameters + Revision
+Topics Learned
+Default Parameters
+Fallback values in functions
+ES6 full revision
+Default Parameter
+function greet(name = "Guest") {
+    console.log("Hello " + name);
+}
+
+greet();
+greet("Atharv");
+Multiple Defaults
+function add(a = 0, b = 0) {
+    console.log(a + b);
+}
+
+add();
+add(5, 10);
+Real Example
+function order(item = "Pizza", qty = 1) {
+    console.log(`Order: ${qty} ${item}`);
+}
+
+order();
+order("Burger", 2);
+Key Takeaways
+Prevents undefined values
+Used in real functions
+Makes code safer
