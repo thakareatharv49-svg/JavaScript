@@ -1,0 +1,58 @@
+09 - Template Literals
+Topics Learned
+Template Literals
+Backticks (`)
+String Interpolation
+Embedding Variables in Strings
+Expressions inside Strings
+What are Template Literals?
+
+Template literals are a modern way to write strings using backticks instead of quotes.
+
+They allow us to insert variables easily using ${}.
+
+Old Way (String Concatenation ❌)
+let name = "Atharv";
+let age = 19;
+
+console.log("My name is " + name + " and I am " + age);
+New Way (Template Literals ✅)
+let name = "Atharv";
+let age = 19;
+
+console.log(`My name is ${name} and I am ${age}`);
+Using Expressions
+
+We can also perform calculations inside ${}.
+
+let a = 4;
+let b = 6;
+
+console.log(`Result is ${a + b}`);
+
+Output:
+
+10
+Multiple Variables
+let name = "Atharv";
+let city = "Pune";
+
+console.log(`My name is ${name} and I live in ${city}`);
+Key Syntax
+`Text ${variable}`
+Use backticks `
+Use ${} for variables or expressions
+Mini Task
+let name = "Atharv";
+let city = "Pune";
+
+console.log(`My name is ${name} and I live in ${city}`);
+
+Output:
+
+My name is Atharv and I live in Pune
+Key Takeaways
+Template literals make strings easier to write
+No need for + signs
+Supports variables and expressions
+Widely used in modern JavaScript and React
