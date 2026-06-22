@@ -1,0 +1,38 @@
+11 – Spread Operator
+Topics Learned
+Spread Operator (...)
+Copying Arrays and Objects
+Merging Arrays
+Updating Objects immutably
+What is Spread Operator?
+
+Spread operator is used to expand values from arrays or objects.
+
+Arrays
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1];
+
+console.log(arr2);
+Merge Arrays
+let a = [1, 2];
+let b = [3, 4];
+
+let result = [...a, ...b];
+
+console.log(result);
+Objects
+let student = {
+    name: "Atharv",
+    age: 19
+};
+
+let newStudent = {
+    ...student,
+    city: "Pune"
+};
+
+console.log(newStudent);
+Key Takeaways
+Copies data safely
+Combines arrays/objects
+Very important in React
