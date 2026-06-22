@@ -1,0 +1,100 @@
+10 - Destructuring
+Topics Learned
+Array Destructuring
+Object Destructuring
+Skipping Values in Arrays
+Renaming Variables in Objects
+Extracting Data Easily
+What is Destructuring?
+
+Destructuring is a shortcut to extract values from arrays or objects into variables.
+
+Array Destructuring
+Normal Way ❌
+let fruits = ["Apple", "Mango", "Banana"];
+
+let f1 = fruits[0];
+let f2 = fruits[1];
+let f3 = fruits[2];
+Destructuring Way ✅
+let fruits = ["Apple", "Mango", "Banana"];
+
+let [f1, f2, f3] = fruits;
+
+console.log(f1);
+console.log(f2);
+console.log(f3);
+
+Output:
+
+Apple
+Mango
+Banana
+Skipping Values
+let numbers = [5, 10, 15];
+
+let [a, , c] = numbers;
+
+console.log(a);
+console.log(c);
+
+Output:
+
+5
+15
+Object Destructuring
+Normal Way ❌
+let student = {
+    name: "Atharv",
+    age: 19
+};
+
+console.log(student.name);
+console.log(student.age);
+Destructuring Way ✅
+let student = {
+    name: "Atharv",
+    age: 19
+};
+
+let { name, age } = student;
+
+console.log(name);
+console.log(age);
+
+Output:
+
+Atharv
+19
+Renaming Variables
+let student = {
+    name: "Atharv",
+    age: 19
+};
+
+let { name: studentName, age: studentAge } = student;
+
+console.log(studentName);
+console.log(studentAge);
+Mini Task
+let student = {
+    name: "Atharv",
+    age: 19,
+    city: "Pune"
+};
+
+let { name, city } = student;
+
+console.log(name);
+console.log(city);
+
+Output:
+
+Atharv
+Pune
+Key Takeaways
+Destructuring helps extract values easily
+Arrays use [ ]
+Objects use { }
+Makes code shorter and cleaner
+Very important for React and modern JavaScript
