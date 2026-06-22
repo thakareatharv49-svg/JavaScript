@@ -1,0 +1,38 @@
+12 – Rest Operator
+Topics Learned
+Rest Operator (...)
+Function parameters
+Collecting multiple values
+What is Rest Operator?
+
+Rest operator collects multiple values into an array.
+
+Function Example
+function add(...numbers) {
+    console.log(numbers);
+}
+
+add(1, 2, 3, 4);
+Sum Example
+function add(...numbers) {
+    let sum = 0;
+
+    for (let num of numbers) {
+        sum += num;
+    }
+
+    console.log(sum);
+}
+
+add(1, 2, 3, 4);
+With Parameters
+function show(name, ...hobbies) {
+    console.log(name);
+    console.log(hobbies);
+}
+
+show("Atharv", "Coding", "Gaming");
+Key Takeaways
+Collects values
+Must be last parameter
+Used in functions
