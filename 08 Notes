@@ -1,0 +1,81 @@
+08 - Arrow Functions
+Topics Learned
+Arrow Functions
+Function Expression
+Parameters in Arrow Functions
+Return values (basic idea)
+Short syntax functions
+What is an Arrow Function?
+
+Arrow functions are a modern and shorter way to write functions in JavaScript.
+
+Normal Function vs Arrow Function
+Normal Function
+function greet() {
+    console.log("Hello");
+}
+Arrow Function
+const greet = () => {
+    console.log("Hello");
+};
+
+Both work the same.
+
+Arrow Function Syntax
+const functionName = () => {
+    // code
+};
+Arrow Function Example
+const sayHi = () => {
+    console.log("Hi Atharv");
+};
+
+sayHi();
+
+Output:
+
+Hi Atharv
+Arrow Function with Parameters
+const greet = (name) => {
+    console.log("Hello " + name);
+};
+
+greet("Atharv");
+
+Output:
+
+Hello Atharv
+Arrow Function with Multiple Parameters
+const add = (a, b) => {
+    console.log(a + b);
+};
+
+add(10, 5);
+
+Output:
+
+15
+Why Use Arrow Functions?
+Shorter syntax
+Cleaner code
+Used in modern JavaScript
+Very common in React
+Key Difference
+Normal Function	Arrow Function
+function greet() {}	const greet = () => {}
+Mini Task
+const intro = () => {
+    console.log("My name is Atharv");
+};
+
+intro();
+
+Output:
+
+My name is Atharv
+Key Takeaways
+Arrow functions are modern JavaScript functions.
+They make code shorter and cleaner.
+Used heavily in React and Node.js.
+Parameters work the same as normal functions.
+They are assigned to variables.
