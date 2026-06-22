@@ -1,0 +1,138 @@
+# DOM Day 1 - Introduction to DOM
+
+## Topics Learned
+
+* DOM (Document Object Model)
+* HTML `id` attribute
+* `document.getElementById()`
+* `innerText`
+* Button click events using `onclick`
+* Changing webpage content with JavaScript
+
+---
+
+## What is DOM?
+
+DOM (Document Object Model) is a representation of an HTML page that JavaScript can access and modify.
+
+JavaScript uses the DOM to:
+
+* Change text
+* Change styles
+* Handle button clicks
+* Update webpage content dynamically
+
+---
+
+## HTML Example
+
+```html
+<h1 id="title">Hello</h1>
+
+<button onclick="changeText()">
+    Click Me
+</button>
+
+<button onclick="reset()">
+    Reset
+</button>
+```
+
+---
+
+## JavaScript Example
+
+```javascript
+function changeText() {
+    document.getElementById("title").innerText =
+        "Atharv Narendra Thakare";
+}
+
+function reset() {
+    document.getElementById("title").innerText =
+        "Hello";
+}
+```
+
+---
+
+## Important Concepts
+
+### id
+
+```html
+<h1 id="title">Hello</h1>
+```
+
+The `id` gives an HTML element a unique name so JavaScript can find it.
+
+---
+
+### getElementById()
+
+```javascript
+document.getElementById("title")
+```
+
+Finds the HTML element whose id is `"title"`.
+
+---
+
+### innerText
+
+```javascript
+document.getElementById("title").innerText = "Atharv";
+```
+
+Changes the text inside the selected element.
+
+---
+
+## Before and After
+
+### Before
+
+```html
+<h1 id="title">Hello</h1>
+```
+
+### After
+
+```javascript
+document.getElementById("title").innerText = "Atharv";
+```
+
+Result:
+
+```html
+<h1 id="title">Atharv</h1>
+```
+
+---
+
+## Key Takeaways
+
+* DOM allows JavaScript to control HTML pages.
+* `id` uniquely identifies an element.
+* `getElementById()` finds an element.
+* `innerText` reads or changes text.
+* `onclick` runs a function when a button is clicked.
+
+---
+
+## Project Files
+
+```text
+DOM-Day-01/
+├── index.html
+├── script.js
+└── README.md
+```
+
+---
+
+## Suggested Commit Message
+
+```text
+DOM Day 1: Learned getElementById, innerText, and onclick events
+```
