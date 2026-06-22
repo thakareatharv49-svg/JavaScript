@@ -1,0 +1,101 @@
+Day 07 - var, let, and const
+Topics Learned
+var
+let
+const
+Variable Reassignment
+Modern JavaScript Variable Rules
+What is ES6?
+
+ES6 (ECMAScript 2015) is a major JavaScript update that introduced many modern features used in React and modern web development.
+
+var
+
+Old way of creating variables.
+
+var name = "Atharv";
+
+console.log(name);
+
+Value can be changed:
+
+var age = 18;
+
+age = 19;
+
+console.log(age);
+
+Output:
+
+19
+let
+
+Modern way of creating variables.
+
+let city = "Pune";
+
+city = "Mumbai";
+
+console.log(city);
+
+Output:
+
+Mumbai
+Key Point
+Value can be changed.
+Preferred over var.
+const
+
+Used for values that should not change.
+
+const country = "India";
+
+console.log(country);
+
+Output:
+
+India
+
+Trying to change a const variable:
+
+const country = "India";
+
+country = "USA";
+
+Output:
+
+Error: Assignment to constant variable
+Comparison
+Keyword	Can Change Value?
+var	Yes
+let	Yes
+const	No
+Mini Task
+const name = "Atharv";
+
+let score = 0;
+
+score = 100;
+
+console.log(name);
+console.log(score);
+
+Output:
+
+Atharv
+100
+Best Practice
+const name = "Atharv";
+let score = 0;
+
+Use:
+
+const by default
+let when the value needs to change
+Avoid var in modern JavaScript
+Key Takeaways
+var is the older way to declare variables.
+let allows reassignment.
+const prevents reassignment.
+Modern JavaScript mainly uses let and const.
+Prefer const whenever possible.
