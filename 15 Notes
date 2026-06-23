@@ -1,0 +1,138 @@
+# DOM Day 2 - querySelector() and addEventListener()
+
+## Topics Learned
+- querySelector()
+- addEventListener()
+- Event handling
+- DOM manipulation
+- Updating webpage content dynamically
+
+---
+
+## querySelector()
+
+`querySelector()` is used to select HTML elements.
+
+### Select by ID
+
+```javascript
+document.querySelector("#title");
+```
+
+Example:
+
+```html
+<h1 id="title">Hello</h1>
+```
+
+The `#` symbol represents an ID.
+
+---
+
+### Select by Class
+
+```javascript
+document.querySelector(".box");
+```
+
+The `.` symbol represents a class.
+
+---
+
+### Select by Tag
+
+```javascript
+document.querySelector("h1");
+```
+
+Selects the first `<h1>` element on the page.
+
+---
+
+## addEventListener()
+
+`addEventListener()` is used to listen for events such as clicks, keyboard input, and form submissions.
+
+### Syntax
+
+```javascript
+element.addEventListener("event", function() {
+    // code to execute
+});
+```
+
+---
+
+## Click Event Example
+
+HTML:
+
+```html
+<h1 id="title">Hello</h1>
+<button id="btn">Change Text</button>
+```
+
+JavaScript:
+
+```javascript
+let button = document.querySelector("#btn");
+
+button.addEventListener("click", function() {
+    document.querySelector("#title").innerText =
+    "AI Healthcare App";
+});
+```
+
+### Result
+
+Before clicking:
+
+```text
+Hello
+```
+
+After clicking:
+
+```text
+AI Healthcare App
+```
+
+---
+
+## Why Use addEventListener()?
+
+Instead of:
+
+```html
+<button onclick="changeText()">
+```
+
+developers prefer:
+
+```javascript
+button.addEventListener("click", function() {
+    // code
+});
+```
+
+Benefits:
+- Keeps HTML and JavaScript separate
+- Makes code cleaner
+- Easier to manage large projects
+- Allows multiple event listeners
+
+---
+
+## Key Takeaways
+
+- `querySelector()` selects HTML elements.
+- `#` is used for IDs.
+- `.` is used for classes.
+- `addEventListener()` listens for events.
+- Click events allow users to interact with webpages.
+- JavaScript can update webpage content without reloading the page.
+
+---
+
+
+```
