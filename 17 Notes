@@ -1,0 +1,148 @@
+# DOM Day 5 - Forms and Form Submission
+
+## Topics Learned
+- HTML Forms
+- Form Submission
+- submit Event
+- preventDefault()
+- Reading User Input
+- Displaying Submitted Data
+
+---
+
+## What is a Form?
+
+A form is used to collect data from users.
+
+Examples:
+- Login Form
+- Registration Form
+- Contact Form
+- Medical Report Form
+
+---
+
+## Basic Form Example
+
+```html
+<form id="myForm">
+
+    <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter City"
+    >
+
+    <button>
+        Submit
+    </button>
+
+</form>
+
+<h2 id="result"></h2>
+```
+
+---
+
+## submit Event
+
+The `submit` event runs when a form is submitted.
+
+```javascript
+form.addEventListener("submit", function(event) {
+
+});
+```
+
+---
+
+## preventDefault()
+
+```javascript
+event.preventDefault();
+```
+
+Stops the browser from reloading the page after form submission.
+
+Without `preventDefault()`:
+```text
+Submit Form
+↓
+Page Reloads
+```
+
+With `preventDefault()`:
+```text
+Submit Form
+↓
+JavaScript Handles Data
+↓
+No Reload
+```
+
+---
+
+## Reading User Input
+
+```javascript
+let city =
+document.querySelector("#cityInput").value;
+```
+
+`.value` gets the data entered by the user.
+
+Example:
+
+```text
+Input Box:
+Pune
+```
+
+Result:
+
+```javascript
+city = "Pune";
+```
+
+---
+
+## Displaying Data
+
+```javascript
+document.querySelector("#result").innerText =
+city;
+```
+
+Displays the submitted city on the webpage.
+
+---
+
+## Complete Example
+
+```javascript
+let form = document.querySelector("#myForm");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let city =
+    document.querySelector("#cityInput").value;
+
+    document.querySelector("#result").innerText =
+    city;
+
+});
+```
+
+---
+
+## Key Takeaways
+
+- Forms collect user data.
+- submit event handles form submission.
+- preventDefault() stops page reload.
+- .value reads user input.
+- innerText displays data on the page.
+
+---
