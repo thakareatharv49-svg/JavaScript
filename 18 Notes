@@ -1,0 +1,150 @@
+# DOM Day 6 - Arrays and DOM
+
+## Topics Learned
+- Arrays
+- Array length
+- Loops
+- innerHTML
+- Displaying array data on a webpage
+
+---
+
+## Arrays
+
+An array stores multiple values in a single variable.
+
+```javascript
+let cities = ["Pune", "Mumbai", "Nagpur"];
+```
+
+### Array Index
+
+```text
+0 → Pune
+1 → Mumbai
+2 → Nagpur
+```
+
+---
+
+## Array Length
+
+```javascript
+cities.length
+```
+
+Returns the number of items in the array.
+
+Example:
+
+```javascript
+let cities = ["Pune", "Mumbai", "Nagpur"];
+
+console.log(cities.length);
+```
+
+Output:
+
+```text
+3
+```
+
+---
+
+## innerHTML
+
+```javascript
+element.innerHTML
+```
+
+Used to add or modify HTML content.
+
+Example:
+
+```javascript
+list.innerHTML = "<li>Pune</li>";
+```
+
+Creates:
+
+```html
+<li>Pune</li>
+```
+
+inside the webpage.
+
+---
+
+## Loop Through an Array
+
+```javascript
+for(let i = 0; i < cities.length; i++) {
+    console.log(cities[i]);
+}
+```
+
+Output:
+
+```text
+Pune
+Mumbai
+Nagpur
+```
+
+---
+
+## Display Array Data on a Webpage
+
+HTML:
+
+```html
+<ul id="cityList"></ul>
+```
+
+JavaScript:
+
+```javascript
+let cities = ["Pune", "Mumbai", "Nagpur"];
+
+let cityList =
+document.querySelector("#cityList");
+
+for(let i = 0; i < cities.length; i++) {
+
+    cityList.innerHTML +=
+    `<li>${cities[i]}</li>`;
+
+}
+```
+
+Output:
+
+```text
+• Pune
+• Mumbai
+• Nagpur
+```
+
+---
+
+## Why Use += ?
+
+```javascript
+list.innerHTML +=
+```
+
+Adds new content while keeping existing content.
+
+Without `+=`, previous content gets replaced.
+
+---
+
+## Key Takeaways
+
+- Arrays store multiple values.
+- `length` returns the size of an array.
+- Loops help process array items.
+- `innerHTML` creates HTML content.
+- `+=` appends content instead of replacing it.
+
+--
