@@ -1,0 +1,70 @@
+# DOM Day 4 - Changing Styles with JavaScript
+
+## Topics Learned
+- style.color
+- style.backgroundColor
+- style.fontSize
+- style.display
+
+---
+
+## Change Text Color
+
+```javascript
+document.querySelector("#title").style.color = "red";
+```
+
+Changes the text color of the selected element.
+
+---
+
+## Change Background Color
+
+```javascript
+document.body.style.backgroundColor = "blue";
+```
+
+Changes the page background color.
+
+---
+
+## Change Font Size
+
+```javascript
+document.querySelector("#title").style.fontSize = "50px";
+```
+
+Changes the size of the text.
+
+---
+
+## Hide an Element
+
+```javascript
+document.querySelector("#title").style.display = "none";
+```
+
+Hides the selected element.
+
+---
+
+## Show an Element
+
+```javascript
+document.querySelector("#title").style.display = "block";
+```
+
+Makes the hidden element visible again.
+
+---
+
+## Key Takeaways
+
+- JavaScript can modify CSS styles.
+- `style.color` changes text color.
+- `style.backgroundColor` changes background color.
+- `style.fontSize` changes text size.
+- `style.display` can hide or show elements.
+
+---
+
