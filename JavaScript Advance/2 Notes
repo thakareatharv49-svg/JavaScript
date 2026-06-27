@@ -1,0 +1,166 @@
+# 🚀 Advanced JavaScript Day 2 - Scope & Closures
+
+## 📖 Overview
+
+Today I learned one of the most important JavaScript concepts: **Scope** and **Closures**.
+
+Scope determines where variables can be accessed, while closures allow functions to remember variables from their outer scope even after the outer function has finished executing.
+
+---
+
+## 📚 Topics Covered
+
+- Global Scope
+- Function Scope
+- Block Scope
+- Difference between `var`, `let`, and `const`
+- Closures
+
+---
+
+## 🌍 Global Scope
+
+Variables declared outside any function or block can be accessed from anywhere.
+
+```javascript
+let city = "Pune";
+
+function showCity() {
+    console.log(city);
+}
+
+showCity();
+```
+
+### Output
+
+```
+Pune
+```
+
+---
+
+## 🔧 Function Scope
+
+Variables declared inside a function can only be accessed within that function.
+
+```javascript
+function greet() {
+    let message = "Hello";
+    console.log(message);
+}
+
+greet();
+```
+
+Trying to access `message` outside the function results in:
+
+```
+ReferenceError: message is not defined
+```
+
+---
+
+## 📦 Block Scope
+
+Variables declared with `let` and `const` are only available inside the block `{}` where they are declared.
+
+```javascript
+if (true) {
+    let age = 19;
+    console.log(age);
+}
+```
+
+Outside the block:
+
+```javascript
+console.log(age);
+```
+
+Output:
+
+```
+ReferenceError: age is not defined
+```
+
+---
+
+## ⚖️ var vs let vs const
+
+| Keyword | Scope | Can Reassign? |
+|----------|-------|---------------|
+| `var` | Function Scope | ✅ Yes |
+| `let` | Block Scope | ✅ Yes |
+| `const` | Block Scope | ❌ No |
+
+---
+
+## 🔒 Closures
+
+A closure is created when an inner function remembers variables from its outer function.
+
+```javascript
+function outer() {
+    let name = "Atharv";
+
+    function inner() {
+        console.log(name);
+    }
+
+    return inner;
+}
+
+const myFunction = outer();
+myFunction();
+```
+
+### Output
+
+```
+Atharv
+```
+
+---
+
+## 🧠 Key Learnings
+
+- Global variables can be accessed anywhere.
+- Function-scoped variables are only available inside their function.
+- Block-scoped variables (`let` and `const`) are only available inside their block.
+- Inner scopes can access outer scopes.
+- Outer scopes cannot access variables declared inside inner scopes.
+- Closures allow inner functions to remember variables from their outer function.
+
+---
+
+## 📌 Scope Rule
+
+```
+Global Scope
+      │
+      ▼
+Function Scope
+      │
+      ▼
+Block Scope
+```
+
+- ✅ Inner scope → Can access outer scope.
+- ❌ Outer scope → Cannot access inner scope.
+
+---
+
+## 🚀 Why This Matters
+
+Scope and Closures are essential for:
+
+- React Hooks
+- Event Listeners
+- Callbacks
+- Promises
+- Async/Await
+- Node.js
+- Writing clean and maintainable JavaScript
+
+---
