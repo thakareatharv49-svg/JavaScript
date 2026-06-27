@@ -1,0 +1,103 @@
+# DOM Day 7 - Creating Elements Dynamically
+
+## Topics Learned
+- createElement()
+- appendChild()
+- Dynamic DOM Manipulation
+- Creating HTML elements with JavaScript
+- Adding user-generated content
+
+---
+
+## createElement()
+
+`createElement()` creates a new HTML element in memory.
+
+Example:
+
+```javascript
+let li = document.createElement("li");
+```
+
+Creates:
+
+```html
+<li></li>
+```
+
+The element is not visible until it is added to the webpage.
+
+---
+
+## appendChild()
+
+`appendChild()` adds an element as a child of another element.
+
+Example:
+
+```javascript
+let li = document.createElement("li");
+li.innerText = "JavaScript";
+
+document.querySelector("#skillList").appendChild(li);
+```
+
+Output:
+
+```html
+<ul id="skillList">
+    <li>JavaScript</li>
+</ul>
+```
+
+---
+
+## Dynamic List Example
+
+HTML:
+
+```html
+<input type="text" id="skillInput" placeholder="Enter Skill">
+<button id="btn">Add Skill</button>
+
+<ul id="skillList"></ul>
+```
+
+JavaScript:
+
+```javascript
+let button = document.querySelector("#btn");
+
+button.addEventListener("click", function() {
+
+    let skill = document.querySelector("#skillInput").value;
+
+    let li = document.createElement("li");
+
+    li.innerText = skill;
+
+    document.querySelector("#skillList").appendChild(li);
+
+});
+```
+
+---
+
+## Why Create the Element Inside the Click Event?
+
+A new `<li>` is created every time the button is clicked.
+
+This allows multiple items to be added to the list.
+
+---
+
+## Key Takeaways
+
+- `createElement()` creates new HTML elements.
+- `appendChild()` adds elements to the webpage.
+- New elements should be created when needed, such as after a button click.
+- Dynamic DOM manipulation is used in real-world applications like To-Do Lists and chat apps.
+
+---
+
+```
