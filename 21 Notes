@@ -1,0 +1,147 @@
+# DOM Day 9 - Counter App
+
+## Topics Learned
+- Variables
+- Event Listeners
+- Updating the DOM
+- Increment and Decrement Operators
+- Building a Counter App
+
+---
+
+## Project Overview
+
+Built a simple Counter App using JavaScript and the DOM.
+
+Features:
+- Increase Count
+- Decrease Count
+- Reset Count
+
+---
+
+## HTML
+
+```html
+<h1>Counter App</h1>
+
+<h2 id="count">0</h2>
+
+<button id="decreaseBtn">-</button>
+<button id="resetBtn">Reset</button>
+<button id="increaseBtn">+</button>
+```
+
+---
+
+## JavaScript
+
+```javascript
+let count = 0;
+
+let countText = document.querySelector("#count");
+
+let increaseBtn = document.querySelector("#increaseBtn");
+let decreaseBtn = document.querySelector("#decreaseBtn");
+let resetBtn = document.querySelector("#resetBtn");
+
+increaseBtn.addEventListener("click", function () {
+    count++;
+    countText.innerText = count;
+});
+
+decreaseBtn.addEventListener("click", function () {
+    count--;
+    countText.innerText = count;
+});
+
+resetBtn.addEventListener("click", function () {
+    count = 0;
+    countText.innerText = count;
+});
+```
+
+---
+
+## Concepts Learned
+
+### Increment Operator
+
+```javascript
+count++;
+```
+
+Increases the value of `count` by 1.
+
+Equivalent to:
+
+```javascript
+count = count + 1;
+```
+
+---
+
+### Decrement Operator
+
+```javascript
+count--;
+```
+
+Decreases the value of `count` by 1.
+
+Equivalent to:
+
+```javascript
+count = count - 1;
+```
+
+---
+
+### Updating the UI
+
+```javascript
+countText.innerText = count;
+```
+
+Updates the displayed number on the webpage.
+
+Changing a variable alone does not update the webpage. The DOM must also be updated.
+
+---
+
+## Project Flow
+
+```text
+Click Button
+      ↓
+Event Listener Runs
+      ↓
+Variable Changes
+      ↓
+Update DOM
+      ↓
+User Sees New Value
+```
+
+---
+
+## Key Takeaways
+
+- Variables store application data.
+- Event listeners respond to user actions.
+- `count++` increases the value.
+- `count--` decreases the value.
+- `innerText` updates the webpage.
+- The UI must be updated after changing data.
+
+---
+
+## Skills Gained
+
+- DOM Manipulation
+- Variables
+- Event Handling
+- Building Interactive Applications
+- Updating User Interface
+
+---
