@@ -1,0 +1,155 @@
+# DOM Day 10 - To-Do App
+
+## Topics Learned
+- Dynamic DOM Manipulation
+- createElement()
+- appendChild()
+- remove()
+- Input Handling
+- Event Listeners
+- Building a To-Do App
+
+---
+
+## Project Overview
+
+Built a simple To-Do App where users can:
+- Add tasks
+- Display tasks
+- Delete tasks
+- Clear the input field after adding a task
+
+---
+
+## HTML
+
+```html
+<h1>To-Do App</h1>
+
+<input
+type="text"
+id="taskInput"
+placeholder="Enter Task">
+
+<button id="addBtn">
+Add Task
+</button>
+
+<ul id="taskList"></ul>
+```
+
+---
+
+## JavaScript
+
+```javascript
+let input = document.querySelector("#taskInput");
+let button = document.querySelector("#addBtn");
+let taskList = document.querySelector("#taskList");
+
+button.addEventListener("click", function () {
+
+    let task = input.value;
+
+    if (task === "") {
+        return;
+    }
+
+    let li = document.createElement("li");
+
+    li.innerText = task;
+
+    li.addEventListener("click", function () {
+        li.remove();
+    });
+
+    taskList.appendChild(li);
+
+    input.value = "";
+
+});
+```
+
+---
+
+## Concepts Learned
+
+### Read Input
+
+```javascript
+input.value
+```
+
+Gets the text entered by the user.
+
+---
+
+### Create Element
+
+```javascript
+document.createElement("li");
+```
+
+Creates a new list item.
+
+---
+
+### Add Element
+
+```javascript
+taskList.appendChild(li);
+```
+
+Adds the new task to the webpage.
+
+---
+
+### Delete Element
+
+```javascript
+li.remove();
+```
+
+Removes the clicked task.
+
+---
+
+### Clear Input
+
+```javascript
+input.value = "";
+```
+
+Clears the input box after adding a task.
+
+---
+
+## Project Flow
+
+```text
+User Types Task
+        ↓
+Clicks Add
+        ↓
+Read Input
+        ↓
+Create <li>
+        ↓
+Display Task
+        ↓
+Click Task
+        ↓
+Task Removed
+```
+
+---
+
+## Skills Gained
+
+- DOM Manipulation
+- Dynamic Element Creation
+- Event Handling
+- Input Validation
+- Building Interactive Applications
+
+---
