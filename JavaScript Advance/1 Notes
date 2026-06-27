@@ -1,0 +1,177 @@
+# 🚀 Advanced JavaScript Day 1 - Execution Context & Call Stack
+
+## 📖 Overview
+
+Today I learned how JavaScript executes code behind the scenes using the **Execution Context** and **Call Stack**.
+
+Understanding these concepts is essential before learning asynchronous JavaScript, Promises, `async/await`, React, and Node.js.
+
+---
+
+## 📚 Topics Covered
+
+- Execution Context
+- Global Execution Context
+- Function Execution Context
+- Call Stack
+- LIFO (Last In, First Out)
+- Function Execution Flow
+
+---
+
+## 🧠 What is Execution Context?
+
+An **Execution Context** is the environment where JavaScript executes code.
+
+There are two main types:
+
+- Global Execution Context
+- Function Execution Context
+
+When a JavaScript program starts, the Global Execution Context is created automatically.
+
+Whenever a function is called, JavaScript creates a new Function Execution Context.
+
+---
+
+## 🧠 What is the Call Stack?
+
+The **Call Stack** is a data structure that keeps track of function calls.
+
+It follows the **LIFO (Last In, First Out)** principle.
+
+When a function is called, it is pushed onto the stack.
+
+When the function finishes execution, it is removed from the stack.
+
+---
+
+## 💻 Example 1
+
+```javascript
+function greet() {
+    console.log("Hello");
+}
+
+greet();
+
+console.log("Done");
+```
+
+### Output
+
+```
+Hello
+Done
+```
+
+---
+
+## 💻 Example 2
+
+```javascript
+function one() {
+    two();
+}
+
+function two() {
+    console.log("JavaScript");
+}
+
+one();
+```
+
+### Call Stack Flow
+
+```
+Global
+   ↓
+one()
+   ↓
+two()
+```
+
+Execution returns in reverse order:
+
+```
+two() finishes
+↓
+one() finishes
+↓
+Global finishes
+```
+
+---
+
+## 💻 Example 3
+
+```javascript
+function first() {
+    console.log("First");
+}
+
+function second() {
+    first();
+    console.log("Second");
+}
+
+second();
+```
+
+### Output
+
+```
+First
+Second
+```
+
+---
+
+## 🔄 Call Stack Flow
+
+```
+Program Starts
+        │
+        ▼
+Global Execution Context
+        │
+        ▼
+Function Called
+        │
+        ▼
+Push to Call Stack
+        │
+        ▼
+Function Executes
+        │
+        ▼
+Pop from Call Stack
+        │
+        ▼
+Continue Previous Function
+```
+
+---
+
+## 🎯 Key Learnings
+
+- JavaScript executes code inside an Execution Context.
+- Every function call creates a new Function Execution Context.
+- The Call Stack manages function execution.
+- The Call Stack follows the LIFO principle.
+- After a function finishes, JavaScript returns to the previous function.
+
+---
+
+## 🌟 Why This Matters
+
+Understanding the Call Stack is important because it is the foundation for:
+
+- Callbacks
+- Promises
+- Async/Await
+- Event Loop
+- React
+- Node.js
+
+---
