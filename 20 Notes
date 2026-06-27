@@ -1,0 +1,101 @@
+# DOM Day 8 - Updating and Deleting Elements
+
+## Topics Learned
+- Updating Elements
+- Removing Elements
+- remove()
+- display = "none"
+- Multiple Event Listeners
+
+---
+
+## Update Text
+
+```javascript
+document.querySelector("#message").innerText =
+"Welcome to AI Healthcare App";
+```
+
+Updates the text of an existing element.
+
+---
+
+## Remove an Element
+
+```javascript
+document.querySelector("#message").remove();
+```
+
+Completely removes the element from the webpage.
+
+---
+
+## Hide vs Remove
+
+Hide:
+
+```javascript
+document.querySelector("#message").style.display = "none";
+```
+
+- Element is hidden.
+- Still exists in the DOM.
+
+Remove:
+
+```javascript
+document.querySelector("#message").remove();
+```
+
+- Element is deleted from the DOM.
+- It no longer exists on the page.
+
+---
+
+## Example
+
+```javascript
+let updateBtn = document.querySelector("#updateBtn");
+
+updateBtn.addEventListener("click", function() {
+    document.querySelector("#message").innerText =
+    "Welcome to AI Healthcare App";
+});
+
+let deleteBtn = document.querySelector("#deleteBtn");
+
+deleteBtn.addEventListener("click", function() {
+    document.querySelector("#message").remove();
+});
+```
+
+---
+
+## Common Mistakes
+
+❌ Missing `#` in `querySelector()`
+
+Wrong:
+
+```javascript
+document.querySelector("message");
+```
+
+Correct:
+
+```javascript
+document.querySelector("#message");
+```
+
+---
+
+## Key Takeaways
+
+- `innerText` updates text.
+- `remove()` deletes an element.
+- `display = "none"` hides an element.
+- Use different variable names for different buttons.
+- Always use `#` when selecting an element by ID.
+
+---
+
