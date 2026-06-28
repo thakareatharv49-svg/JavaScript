@@ -1,0 +1,165 @@
+# 🚀 Advanced JavaScript Day 6 - Callbacks & Asynchronous JavaScript
+
+## 📖 Overview
+
+Today I learned about **Callbacks** and **Asynchronous JavaScript**. JavaScript normally executes code line by line (synchronously), but some operations such as `setTimeout()` run asynchronously, allowing the program to continue executing while waiting.
+
+---
+
+## 📚 Topics Covered
+
+- Synchronous JavaScript
+- Asynchronous JavaScript
+- Callback Functions
+- `setTimeout()`
+- JavaScript Execution Order
+
+---
+
+## 🔄 Synchronous JavaScript
+
+Synchronous JavaScript executes code one line at a time.
+
+### Example
+
+```javascript
+console.log("First");
+console.log("Second");
+console.log("Third");
+```
+
+### Output
+
+```
+First
+Second
+Third
+```
+
+---
+
+## ⏳ Asynchronous JavaScript
+
+Asynchronous JavaScript allows time-consuming operations to run later without blocking the execution of the remaining code.
+
+### Example
+
+```javascript
+console.log("First");
+
+setTimeout(function () {
+    console.log("Second");
+}, 2000);
+
+console.log("Third");
+```
+
+### Output
+
+```
+First
+Third
+Second
+```
+
+---
+
+## 📞 Callback Function
+
+A callback is a function passed as an argument to another function and executed later.
+
+### Example
+
+```javascript
+function greet() {
+    console.log("Hello");
+}
+
+setTimeout(greet, 2000);
+```
+
+After 2 seconds:
+
+```
+Hello
+```
+
+---
+
+## ⏱️ Using `setTimeout()`
+
+```javascript
+setTimeout(function () {
+    console.log("Hello after 3 seconds");
+}, 3000);
+```
+
+This schedules the function to run after 3 seconds.
+
+---
+
+## 💻 Practice Example
+
+```javascript
+console.log("Loading...");
+
+setTimeout(function () {
+    console.log("Welcome Atharv");
+}, 3000);
+```
+
+### Output
+
+```
+Loading...
+(wait 3 seconds)
+Welcome Atharv
+```
+
+---
+
+## ⚠️ Important Interview Concept
+
+```javascript
+console.log(1);
+
+setTimeout(function () {
+    console.log(2);
+}, 0);
+
+console.log(3);
+```
+
+### Output
+
+```
+1
+3
+2
+```
+
+Even with a delay of `0` milliseconds, the callback runs only after the current synchronous code finishes executing.
+
+---
+
+## 🧠 Key Learnings
+
+- JavaScript executes synchronous code line by line.
+- Asynchronous operations do not block the execution of the remaining code.
+- `setTimeout()` schedules code to execute later.
+- Callback functions are passed to other functions and executed when needed.
+- JavaScript completes the current execution before running queued callbacks.
+
+---
+
+## 🚀 Why This Matters
+
+These concepts are essential for:
+
+- API Calls
+- Promises
+- Async/Await
+- React
+- Node.js
+- Event Handling
+
