@@ -1,0 +1,149 @@
+# 🚀 Advanced JavaScript Day 4 - map(), filter(), reduce()
+
+## 📖 Overview
+
+Today I learned the three most commonly used JavaScript array methods:
+
+- map()
+- filter()
+- reduce()
+
+These methods make it easier to transform, filter, and combine data without using traditional loops.
+
+---
+
+## 📚 Topics Covered
+
+- map()
+- filter()
+- reduce()
+- Array transformations
+- Data filtering
+- Array aggregation
+
+---
+
+## 🗺️ map()
+
+`map()` creates a **new array** by applying a function to every element.
+
+### Example
+
+```javascript
+let numbers = [1, 2, 3];
+
+let doubled = numbers.map(function(num) {
+    return num * 2;
+});
+
+console.log(doubled);
+```
+
+### Output
+
+```
+[2, 4, 6]
+```
+
+---
+
+## 🔍 filter()
+
+`filter()` creates a **new array** containing only the elements that match a condition.
+
+### Example
+
+```javascript
+let numbers = [5, 12, 20, 3];
+
+let result = numbers.filter(function(num) {
+    return num > 10;
+});
+
+console.log(result);
+```
+
+### Output
+
+```
+[12, 20]
+```
+
+---
+
+## ➕ reduce()
+
+`reduce()` combines all elements into a single value.
+
+### Example
+
+```javascript
+let numbers = [1, 2, 3, 4];
+
+let total = numbers.reduce(function(sum, num) {
+    return sum + num;
+}, 0);
+
+console.log(total);
+```
+
+### Output
+
+```
+10
+```
+
+---
+
+## 💻 Practice Example
+
+```javascript
+let numbers = [2, 3, 4];
+
+let squares = numbers.map(function(num) {
+    return num * num;
+});
+
+console.log(squares);
+```
+
+### Output
+
+```
+[4, 9, 16]
+```
+
+---
+
+## 🧠 Key Learnings
+
+- `map()` transforms every element.
+- `filter()` keeps elements that satisfy a condition.
+- `reduce()` combines all elements into one value.
+- These methods return new values without modifying the original array.
+
+---
+
+## 🚀 Why This Matters
+
+These methods are widely used in:
+
+- React
+- Node.js
+- Data processing
+- API responses
+- JavaScript interviews
+
+---
+
+## 📌 Next Topic
+
+➡️ **Advanced JavaScript Day 5 – Arrow Functions**
+
+Topics:
+
+- Arrow Function syntax (`=>`)
+- Implicit return
+- Arrow functions with array methods
+- Differences between regular and arrow functions
+
