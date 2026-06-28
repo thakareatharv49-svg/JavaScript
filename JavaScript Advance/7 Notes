@@ -1,0 +1,140 @@
+# 🚀 Advanced JavaScript Day 7 - Promises
+
+## 📖 Overview
+
+Today I learned about **Promises** in JavaScript. Promises are used to handle asynchronous operations and make code cleaner than nested callbacks.
+
+---
+
+## 📚 Topics Covered
+
+- What is a Promise?
+- Promise States
+- resolve()
+- reject()
+- .then()
+- .catch()
+
+---
+
+## 🔄 Promise States
+
+A Promise has three states:
+
+- Pending ⏳
+- Fulfilled ✅
+- Rejected ❌
+
+---
+
+## 💻 Creating a Promise
+
+```javascript
+let promise = new Promise(function(resolve, reject) {
+
+    let success = true;
+
+    if (success) {
+        resolve("Data Loaded");
+    } else {
+        reject("Error Loading Data");
+    }
+
+});
+```
+
+---
+
+## ✅ Using `.then()`
+
+```javascript
+let promise = new Promise(function(resolve) {
+    resolve("Login Successful");
+});
+
+promise.then(function(result) {
+    console.log(result);
+});
+```
+
+### Output
+
+```
+Login Successful
+```
+
+---
+
+## ❌ Using `.catch()`
+
+```javascript
+let promise = new Promise(function(resolve, reject) {
+    reject("Login Failed");
+});
+
+promise.catch(function(error) {
+    console.log(error);
+});
+```
+
+### Output
+
+```
+Login Failed
+```
+
+---
+
+## 💻 Practice Example
+
+```javascript
+let promise = new Promise(function(resolve, reject) {
+
+    let success = true;
+
+    if (success) {
+        resolve("Welcome Atharv");
+    } else {
+        reject("Not Welcome");
+    }
+
+});
+
+promise
+.then(function(result) {
+    console.log(result);
+})
+.catch(function(error) {
+    console.log(error);
+});
+```
+
+### Output
+
+```
+Welcome Atharv
+```
+
+---
+
+## 🧠 Key Learnings
+
+- Promises handle asynchronous operations.
+- A Promise has three states: Pending, Fulfilled, and Rejected.
+- `resolve()` is called when the operation succeeds.
+- `reject()` is called when the operation fails.
+- `.then()` handles successful results.
+- `.catch()` handles errors.
+
+---
+
+## 🚀 Why This Matters
+
+Promises are used in:
+
+- API Calls
+- Fetch API
+- Async/Await
+- React
+- Node.js
+- Database Operations
