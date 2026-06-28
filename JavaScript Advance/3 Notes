@@ -1,0 +1,176 @@
+# 🚀 Advanced JavaScript Day 3 - Higher-Order Functions
+
+## 📖 Overview
+
+Today I learned about **Higher-Order Functions (HOFs)** in JavaScript.
+
+Higher-Order Functions are functions that can accept other functions as arguments or return functions. They are a fundamental concept used in modern JavaScript, React, and Node.js.
+
+---
+
+## 📚 Topics Covered
+
+- Functions as Values
+- Passing Functions as Arguments
+- Returning Functions
+- Callback Functions
+- Real-world Examples
+
+---
+
+## 🧠 What is a Higher-Order Function?
+
+A Higher-Order Function is a function that:
+
+- Accepts another function as an argument, or
+- Returns another function.
+
+---
+
+## 💻 Example 1 - Passing a Function
+
+```javascript
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+function processUser(callback) {
+    callback("Atharv");
+}
+
+processUser(greet);
+```
+
+### Output
+
+```
+Hello Atharv
+```
+
+---
+
+## 💻 Example 2 - Functions are Values
+
+```javascript
+function sayHi() {
+    console.log("Hi");
+}
+
+let myFunction = sayHi;
+
+myFunction();
+```
+
+### Output
+
+```
+Hi
+```
+
+---
+
+## 💻 Example 3 - Returning a Function
+
+```javascript
+function outer() {
+    return function () {
+        console.log("Hello");
+    };
+}
+
+let fun = outer();
+
+fun();
+```
+
+### Output
+
+```
+Hello
+```
+
+---
+
+## 💻 Example 4 - Callback Function
+
+```javascript
+function hello() {
+    console.log("Hello");
+}
+
+function execute(fn) {
+    fn();
+}
+
+execute(hello);
+```
+
+### Output
+
+```
+Hello
+```
+
+---
+
+## ⚠️ Passing a Function vs Calling a Function
+
+### ✅ Passing the Function
+
+```javascript
+execute(hello);
+```
+
+- Passes the function itself.
+- The function runs later inside `execute()`.
+
+### ❌ Calling the Function
+
+```javascript
+execute(hello());
+```
+
+- Executes `hello()` immediately.
+- Passes the return value instead of the function.
+- Can cause errors if the function doesn't return another function.
+
+---
+
+## 🌍 Real-World Example
+
+```javascript
+button.addEventListener("click", function () {
+    console.log("Button Clicked");
+});
+```
+
+Here:
+
+- `addEventListener()` is a Higher-Order Function.
+- The anonymous function is passed as a callback.
+
+---
+
+## 🎯 Key Learnings
+
+- Functions are first-class citizens in JavaScript.
+- Functions can be stored in variables.
+- Functions can be passed as arguments.
+- Functions can return other functions.
+- Higher-Order Functions make code reusable and flexible.
+- Callback functions are widely used in JavaScript.
+
+---
+
+## 🚀 Why This Matters
+
+Higher-Order Functions are used in:
+
+- Event Listeners
+- `map()`
+- `filter()`
+- `reduce()`
+- Promises
+- Async/Await
+- React
+- Node.js
