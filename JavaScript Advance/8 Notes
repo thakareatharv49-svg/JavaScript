@@ -1,0 +1,118 @@
+# 🚀 Advanced JavaScript Day 8 - Async/Await
+
+## 📖 Overview
+
+Today I learned about **async** and **await**, the modern way to work with Promises in JavaScript. They make asynchronous code easier to read and maintain compared to using `.then()` and `.catch()`.
+
+---
+
+## 📚 Topics Covered
+
+- async keyword
+- await keyword
+- Working with Promises
+- Async Functions
+- Promise Handling
+
+---
+
+## 🔹 Async Function
+
+The `async` keyword makes a function automatically return a Promise.
+
+```javascript
+async function greet() {
+    return "Hello Atharv";
+}
+
+greet().then(function(result) {
+    console.log(result);
+});
+```
+
+### Output
+
+```
+Hello Atharv
+```
+
+---
+
+## 🔹 Await Keyword
+
+The `await` keyword waits for a Promise to complete before executing the next line.
+
+```javascript
+function getData() {
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+            resolve("Data Loaded");
+        }, 2000);
+    });
+}
+
+async function showData() {
+    let result = await getData();
+    console.log(result);
+}
+
+showData();
+```
+
+### Output
+
+```
+(wait 2 seconds)
+Data Loaded
+```
+
+---
+
+## 💻 Practice Example
+
+```javascript
+function greet() {
+
+    return new Promise(function(resolve) {
+        resolve("Welcome Atharv");
+    });
+
+}
+
+async function showName() {
+
+    let name = await greet();
+
+    console.log(name);
+
+}
+
+showName();
+```
+
+### Output
+
+```
+Welcome Atharv
+```
+
+---
+
+## 🧠 Key Learnings
+
+- `async` makes a function return a Promise.
+- `await` pauses execution until a Promise completes.
+- `await` can only be used inside an `async` function.
+- `async/await` makes asynchronous code cleaner than chaining `.then()`.
+
+---
+
+## 🚀 Why This Matters
+
+`async/await` is widely used in:
+
+- Fetch API
+- REST APIs
+- React Applications
+- Node.js
+- Database Operations
